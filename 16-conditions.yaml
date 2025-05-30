@@ -1,0 +1,13 @@
+- name: playbook control using ansible facts
+  hosts: web
+  become: yes
+  tasks:
+  - name: install nginx if redhat
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+  
+  - name: install nginx if debian
+    ansible.builtin.apt:
+      name: nginx
+      state: present
