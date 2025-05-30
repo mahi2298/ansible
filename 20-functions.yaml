@@ -20,6 +20,6 @@
 
   - name: convert to lower
     vars:
-      name: "mahi reddy"
+      name: "MAHI REDDY"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
