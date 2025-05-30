@@ -6,6 +6,6 @@
     DURATION: 10HR
     TRAINER: Maheswari
   tasks:
-  - name: print course information
+  - name: play level variables
     ansible.builtin.debug:
-      msg "hello {{ COURSE }}, DURATION is {{ DURATION }}, TRAINER is {{ TRAINER }}"
+      msg: " Hello {{ COURSE }}, DURATION is {{ DURATION }}, TRAINER is {{ TRAINER }}"
