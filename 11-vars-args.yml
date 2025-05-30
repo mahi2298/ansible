@@ -1,0 +1,11 @@
+- name: variables from inventory
+  hosts: local
+  connection: local
+  tasks:
+  - name: print course info
+    ansible.builtin.debug:
+      # here variables are declared inside inventory and calling here
+      msg: "Hello I am Learning {{ COURSE }}, Duration is {{ DURATION }}, TRAINER is {{ TRAINER }}" 
+
+# here commenting the local host ip address in inventory file and passing the arguments through command prompt
+#ansible-playbook -i inventory.ini 11-var-args.yml -e "COURSE=ARGS" -e "DURATION=120HRS" -e "TRAINER=mahi"

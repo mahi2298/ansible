@@ -1,0 +1,20 @@
+- name: variable preferences
+  hosts: local
+  connection: local
+  vars:
+    GREETING: Hello from Play
+  vars_files:
+  - course.yml
+  vars_prompt:
+  - name: GREETING
+    prompt: Please enter the GREETING
+    private: false
+  tasks:
+  - name: print msg information
+    vars:
+      GREETING: Hello from Task
+    ansible.builtin.debug:
+      msg "Hello I am learning {{ COURSE }},Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
+
+# here we are checking preference ansible-playbook -i inventory.ini 12-var-preference.yml -e "GREETING=Hello from args"
+#Preference 1. Command line argument  2.Task  3.File  4.Prompt  5.Play 6.Inventory
