@@ -10,4 +10,4 @@
 
   - name: person information separated by delimiter 
     ansible.builtin.debug:
-      msg: "Hello {{ persons | split(,) }}"
+      msg: "Hello {{ persons | split(',') }}"
