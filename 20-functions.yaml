@@ -4,4 +4,4 @@
   tasks:
   - name: person information does not exist
     ansible.builtin.debug:
-      msg: "Hello {{ person }}"
+      msg: "Hello {{ person | default('Mahi') }}"
