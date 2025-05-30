@@ -31,3 +31,12 @@
         Trainer: "Maheswari"
     ansible.builtin.debug:
       msg: "Hello {{ course | dict2items }}"
+  
+
+  - name: liat to Map
+    vars:
+      course: 
+      - {'key': 'Duration','value': '120HR'}
+      - {'key': 'Trainer', 'value': 'Maheswari'}
+    ansible.builtin.debug:
+      msg: "Hello {{ course | items2dict }}"
