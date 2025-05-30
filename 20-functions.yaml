@@ -23,3 +23,11 @@
       name: "MAHI REDDY"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
+
+  - name: map to list
+    vars:
+      course: 
+        Duration: 120HR
+        Trainer: "Maheswari"
+    ansible.builtin.debug:
+      msg: "Hello {{ course | dict2items }}"
