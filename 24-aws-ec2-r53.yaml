@@ -16,7 +16,7 @@
       vpc_subnet_id: "{{  subnet_id }}"
       instance_type: t2.micro
       security_group: "{{ sg_id }}"
-      image_id:
+      image_id: ami-09c813fb71547fc4f
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
