@@ -33,7 +33,7 @@
       msg: "Hello {{ course | dict2items }}"
   
 
-  - name: liat to Map
+  - name: list to Map
     vars:
       course: 
       - {'key': 'Duration','value': '120HR'}

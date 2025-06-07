@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   tasks:
-  - name: shell vs command
+  - name: redirect output to a file
    # ansible.builtin.command: "ls -ltr >> /tmp/output.txt"
     ansible.builtin.shell: "ls -ltr >> /tmp/output.txt"
     register: command_result
@@ -10,3 +10,14 @@
   - name: print the outcome
     ansible.builtin.debug:
       msg: "{{ command_result }}"
+
+  - name: redirect output to a file using command
+    ansible.builtin.command: "ls -ltr"
+    #ansible.builtin.shell: "ls -ltr >> /tmp/output.txt"
+    register: command_output
+
+  - name: print the result
+    ansible.builtin.debug:
+      msg: "{{ command_output }}"
+  
+
