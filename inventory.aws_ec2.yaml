@@ -4,7 +4,7 @@ regions:
 keyed_groups:
 - key: tags.Name
   prefix: "dynamic"
-  separator: ""
+  separator: "_"
 filters:
   tag:Name: frontend
   instance-state-name : running
